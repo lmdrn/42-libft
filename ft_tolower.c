@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 16:07:49 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/17 14:27:24 by lmedrano         ###   ########.fr       */
+/*   Created: 2022/10/17 14:14:18 by lmedrano          #+#    #+#             */
+/*   Updated: 2022/10/17 14:47:09 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <string.h>
-void	*ft_memmove(void *dst, const void *src, size_t nbytes);
-void	*ft_memcpy(void *dst, const void *src, size_t nbytes);
-void	*ft_memchr(const void *s, int c, size_t nbytes);
-size_t	ft_strlen(const char *s);
-int	ft_isascii(int c);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
+#include "libft.h"
+
+int	ft_tolower(int c)
+{
+	unsigned char letter;
+	letter = c;
+
+	if ((letter >= 65) && (letter <= 90))
+		letter += 32;
+	return (letter);
+}

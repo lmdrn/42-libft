@@ -6,11 +6,11 @@
 #    By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 15:51:11 by lmedrano          #+#    #+#              #
-#    Updated: 2022/10/17 13:52:51 by lmedrano         ###   ########.fr        #
+#    Updated: 2022/10/17 14:12:25 by lmedrano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= ft_memmove.c ft_memcpy.c
+SRCS	= ft_memmove.c ft_memcpy.c ft_memchr.c ft_strlen.c ft_isascii.c ft_toupper.c ft_tolower.c
 
 OBJS	= ${SRCS:.c=.o}
 
