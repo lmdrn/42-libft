@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 14:14:18 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/17 14:47:09 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/17 17:03:26 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	unsigned char letter;
-	letter = c;
-
-	if ((letter >= 65) && (letter <= 90))
-		letter += 32;
-	return (letter);
+	if ((c >= 65) && (c <= 90))
+		c += 32;
+	return (c);
 }

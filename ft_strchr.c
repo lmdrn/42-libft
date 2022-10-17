@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 14:17:46 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/17 17:03:55 by lmedrano         ###   ########.fr       */
+/*   Created: 2022/10/17 15:37:27 by lmedrano          #+#    #+#             */
+/*   Updated: 2022/10/17 16:31:54 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if ((c >= 'a') && (c <= 'z'))
-		c -= 32;
-	return (c);
+	unsigned char letter;
+	int i;
+
+	i = 0;
+	letter = c;
+	while ((s[i] != '\0') && (s[i] != letter))
+	{
+		i++;
+	}
+	if (s[i] == letter)
+		return (&((char *)s)[i]);
+	return (0);
 }
