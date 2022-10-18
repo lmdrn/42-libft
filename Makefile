@@ -6,38 +6,38 @@
 #    By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 15:51:11 by lmedrano          #+#    #+#              #
-#    Updated: 2022/10/17 16:38:41 by lmedrano         ###   ########.fr        #
+#    Updated: 2022/10/18 11:38:42 by lmedrano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= ft_memmove.c ft_memcpy.c ft_memchr.c ft_strlen.c ft_isascii.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c
+SRCS		= ft_memmove.c ft_memcpy.c ft_memchr.c ft_strlen.c ft_isascii.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isprint.c ft_memset.c 
 
-OBJS	= ${SRCS:.c=.o}
+OBJS		= ${SRCS:.c=.o}
 
-NAME	= libft.a
+NAME		= libft.a
 
-CC	= gcc
+CC			= gcc
 
-ARRC	= ar rc
+ARRC		= ar rc
 
-RM	= rm -f
+RM			= rm -f
 
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS		= -Wall -Werror -Wextra
 
 .c.o:	
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-		${ARRC} ${NAME} ${OBJS}
+			${ARRC} ${NAME} ${OBJS}
 
-all:	${NAME}
+all:		${NAME}
 
 clean:	
-	${RM} ${OBJS}
+			${RM} ${OBJS}
 
-fclean: clean 
-	${RM} ${NAME}
+fclean: 	clean 
+			${RM} ${NAME}
 
-re:	fclean all	
+re:			fclean all	
 
-.PHONY: all clean fclean re
+.PHONY: 	all clean fclean re
