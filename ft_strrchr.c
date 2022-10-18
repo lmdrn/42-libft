@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:33:07 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/17 16:57:47 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:37:44 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char letter;
-	int i;
-	
+	char	letter;
+	int		i;
+
 	letter = c;
 	i = 0;
 	while ((s[i] != '\0'))

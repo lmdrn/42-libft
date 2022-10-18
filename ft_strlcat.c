@@ -1,29 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmedrano <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 13:14:16 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/18 15:35:05 by lmedrano         ###   ########.fr       */
+/*   Created: 2022/10/18 15:39:03 by lmedrano          #+#    #+#             */
+/*   Updated: 2022/10/18 18:22:15 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	*str;
-	int		i;
+	size_t	i;
+	size_t	j;
+	size_t	dst_len;
+	size_t	src_len;
 
 	i = 0;
-	str = b;
-	while (len)
-	{
-		str[i] = c;
+	while (src[i] != '\0')
 		i++;
-		len--;
+	src_len = i;
+	i = 0;
+	while ((dst[i] != '\0'))
+		i++;
+	dst_len = i;
+	j = 0;
+	if (dstsize == 0)
+		return (src_len);
+	while ((src[j] != '\0') && (i < (dstsize - 1)))
+	{
+		dst[i] = src[j];
+		i++;
+		j++;	
 	}
-	return (b);
+	dst[i] = '\0';
+	if (dst_len > dstsize)
+		return (src_len + dstsize);
+	return (dst_len + src_len);	
 }

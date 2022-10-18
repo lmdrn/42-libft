@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 14:08:00 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/17 14:09:52 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:36:31 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

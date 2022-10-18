@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmedrano <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 15:37:27 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/18 15:35:43 by lmedrano         ###   ########.fr       */
+/*   Created: 2022/10/18 11:53:26 by lmedrano          #+#    #+#             */
+/*   Updated: 2022/10/18 14:35:53 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t nbytes)
 {
-	unsigned char	letter;
-	int				i;
+	size_t	i;
 
 	i = 0;
-	letter = c;
-	while ((s[i] != '\0') && (s[i] != letter))
+	while (nbytes > 0)
 	{
-		i++;
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		else
+		{
+			i++;
+		}
+		nbytes --;
 	}
-	if (s[i] == letter)
-		return (&((char *)s)[i]);
 	return (0);
 }

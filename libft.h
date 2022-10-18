@@ -6,12 +6,18 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:07:49 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/18 11:39:36 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:24:06 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#	ifndef LIBFT_H
+
+#	define LIBFT_H
+
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+
 void	*ft_memmove(void *dst, const void *src, size_t nbytes);
 void	*ft_memcpy(void *dst, const void *src, size_t nbytes);
 void	*ft_memchr(const void *s, int c, size_t nbytes);
@@ -27,3 +33,9 @@ int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isprint(int c);
 void	*ft_memset(void *b, int c, size_t len);
+int		ft_memcmp(const void *s1, const void *s2, size_t nbytes);
+int		ft_strncmp(const char *s1, const char *s2, size_t nbytes);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+
+#endif
