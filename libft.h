@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:07:49 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/18 18:24:06 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:21:32 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t nbytes);
 int		ft_strncmp(const char *s1, const char *s2, size_t nbytes);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+int	ft_atoi(const char *str);
+char	*ft_strnstr(const char *h, const char *n, size_t len);
 
 #endif
