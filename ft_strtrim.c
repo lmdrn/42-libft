@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmedrano <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 18:28:17 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/25 18:20:27 by lmedrano         ###   ########.fr       */
+/*   Created: 2022/10/25 17:47:38 by lmedrano          #+#    #+#             */
+/*   Updated: 2022/10/25 18:19:07 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char			*str;
-	unsigned int	i;
-	unsigned int	j;
+	char	*str;
+	size_t	count;
+	int		i;
+	int		j;
 
 	i = 0;
-	j = start;
-	if (start >= (ft_strlen(s)))
-		len = 0;
-	if (len > ft_strlen(s))
-		len = ft_strlen(s) - start;
-	str = malloc(len + 1);
+	count = ft_strlen(s1) - ft_strlen(set);
+	if (count >= ft_strlen(s1))
+		count = 0;
+	str = malloc(count + 1);
 	if (str == NULL)
 		return (NULL);
-	while (i < len)
-	{
-		str[i] = s[j];
+		j = 0;
+	while (ft_strncmp(s1, set, count) == 0)
+	{	
+		str[i++] = ((char *)s1)[j++];
 		i++;
-		j++;
 	}
 	str[i] = '\0';
 	return (str);
