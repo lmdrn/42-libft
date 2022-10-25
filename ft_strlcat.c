@@ -6,7 +6,7 @@
 /*   By: lmedrano <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:39:03 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/18 18:22:15 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:04:38 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (dstsize == 0)
 		return (src_len);
 	while ((src[j] != '\0') && (i < (dstsize - 1)))
-	{
-		dst[i] = src[j];
-		i++;
-		j++;	
-	}
+		dst[i++] = src[j++];
 	dst[i] = '\0';
 	if (dst_len > dstsize)
 		return (src_len + dstsize);
-	return (dst_len + src_len);	
+	return (dst_len + src_len);
 }

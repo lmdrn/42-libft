@@ -6,7 +6,7 @@
 /*   By: lmedrano <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 18:22:32 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/21 12:16:54 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:05:06 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_isspace(char c)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	is_neg;
+	int		i;
+	int		is_neg;
 	long	result;
 
 	i = 0;

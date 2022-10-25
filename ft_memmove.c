@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 10:52:00 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/18 15:31:53 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:03:04 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 			i++;
 		}	
 	}
-	return (dst);
+	return ((void *)dst);
 }
