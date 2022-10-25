@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:07:49 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/21 17:19:31 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/21 18:29:33 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ void	*ft_calloc(size_t count, size_t size);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
