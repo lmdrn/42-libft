@@ -6,32 +6,78 @@
 /*   By: lmedrano <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:47:38 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/25 18:19:07 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/26 07:57:57 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+int	ft_starttrim(char const *s1, char const *set)
 {
-	char	*str;
-	size_t	count;
-	int		i;
-	int		j;
+	int	i;
+	int	j;
+	int	start;
 
 	i = 0;
-	count = ft_strlen(s1) - ft_strlen(set);
-	if (count >= ft_strlen(s1))
-		count = 0;
-	str = malloc(count + 1);
-	if (str == NULL)
-		return (NULL);
+	j = 0;
+	start = 0;
+	while (s1[i] != '\0')
+	{
 		j = 0;
-	while (ft_strncmp(s1, set, count) == 0)
-	{	
-		str[i++] = ((char *)s1)[j++];
+		while (set[j] != '\0')
+		{
+			if (set[j] == s1[i])
+			{
+				start++;
+				break ;
+			}
+			j++;
+		}
+		if (set[j] == '\0')
+			break ;
 		i++;
 	}
-	str[i] = '\0';
+	return (start);
+}
+
+int	ft_endtrim(char const *s1, char const *set, int start)
+{
+	int	i;
+	int	j;
+	int	end;
+
+	i = 0;
+	end = ft_strlen(s1);
+	j = end - 1;
+	while (j > start)
+	{
+		i = 0;
+		while (set[i] != '\0')
+		{
+			if (set[i] == s1[j])
+			{
+				end--;
+				break ;
+			}
+			i++;
+		}
+		if (set[i] == '\0')
+			break ;
+		j--;
+	}
+	return (end);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int	start;
+	int	end;
+	char	*str;
+
+	if (!s1 || !set)
+		return (NULL);
+	start = ft_starttrim(s1, set);
+	end = ft_endtrim(s1, set, start);
+	str = ft_substr(s1, start, (end - start));
 	return (str);
 }
