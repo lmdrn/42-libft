@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:07:49 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/26 14:40:06 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/26 18:43:42 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void(*f)(unsigned int, char*));
+char	**ft_split(char const *s, char c);
 
 #endif
