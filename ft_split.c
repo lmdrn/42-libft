@@ -1,10 +1,12 @@
 /* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmedrano <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 18:41:45 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/29 13:13:46 by lmedrano         ###   ########.fr       */
+/*   Created: 2022/10/29 21:33:17 by lmedrano          #+#    #+#             */
+/*   Updated: 2022/10/30 10:39:31 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -13,7 +15,7 @@
 int	ft_word_count(char const *s, char c)
 {
 	int	i;
-	int word;
+	int	word;
 
 	i = 0;
 	word = 0;
@@ -31,64 +33,57 @@ int	ft_word_count(char const *s, char c)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+void	ft_free(char **tab, int j)
 {
-	int		i;
-	int		j;
-	int		k;
-	int		count;
-	char	**tab;
+	if (tab[j] == NULL)
+	{
+		while (j-- > 0)
+			free(tab[j]);
+		free(tab);
+		tab = NULL;
+		return ;
+	}
+}
 
-	i = 0;
+void	ft_second_floor(char const *s, char c, char **tab, int i)
+{
+	int	j;
+	int	k;
+	int	count;
+
 	j = 0;
-	tab = malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
-	if (tab == NULL)
-		return (NULL);
 	while (j < (ft_word_count(s, c)))
 	{
 		count = 0;
 		while (s[i] == c)
-				i++;
+			i++;
 		while (s[i] != c && s[i] != '\0')
 		{
 			count++;
 			i++;
 		}
 		tab[j] = malloc(sizeof(char) * (count + 1));
-		if (tab[j] == NULL)
-		{
-			while (j >= 0)
-			{
-				free(tab[--j]);
-			}
-			free(tab);
-			return (NULL);
-		}
+		ft_free(tab, j);
 		i -= count;
-		k = 0;	
+		k = 0;
 		while (s[i] != c && s[i] != '\0')
 			tab[j][k++] = s[i++];
-		tab[j][k] = '\0';
-		j++;
+	tab[j][k] = '\0';
+	j++;
 	}
-	tab[j] = NULL;
-	return (tab);
+	tab[j] = 0;
 }
-/*
-#include <stdio.h>
-int main (void)
+
+char	**ft_split(char const *s, char c)
 {
-	char	str[] = " Hello Lea";
-	char	**tab = ft_split(str, ' ');
 	int		i;
+	char	**tab;
 
 	i = 0;
-	printf("%d\n", ft_word_count(str, ' '));
-	while (i < ft_word_count(str, ' '))
-	{
-		printf("%s\n", tab[i]);
-		i++;
-	}
-	return (0);
+	tab = malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
+	if (tab == NULL)
+		return (NULL);
+	tab[ft_word_count(s, c)] = 0;
+	ft_second_floor(s, c, tab, i);
+	return (tab);
 }
-*/

@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 10:52:00 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/25 15:41:50 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/29 22:11:35 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	i = 0;
 	n_dst = dst;
 	n_src = src;
-	if (((size_t)dst - (size_t)src) < n)
+	if (dst > src && *n_src != '\0')
 	{
 		while (n > 0)
 		{	
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 			n--;
 		}
 	}
-	else
+	else if (src > dst)
 	{
 		while (i < n)
 		{
@@ -37,5 +37,5 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 			i++;
 		}	
 	}
-	return ((void *)dst);
+	return (dst);
 }

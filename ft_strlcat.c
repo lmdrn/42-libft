@@ -6,7 +6,7 @@
 /*   By: lmedrano <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:39:03 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/25 11:04:38 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/30 10:48:42 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	src_len = i;
 	i = 0;
-	while ((dst[i] != '\0'))
+	while (dst[i] != '\0')
 		i++;
 	dst_len = i;
 	j = 0;

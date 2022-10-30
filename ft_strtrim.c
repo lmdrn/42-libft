@@ -6,7 +6,7 @@
 /*   By: lmedrano <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:47:38 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/29 09:30:26 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/29 21:49:42 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int	ft_endtrim(char const *s1, char const *set, int start)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	start;
-	int	end;
+	int		start;
+	int		end;
 	char	*str;
 
 	if (!s1 || !set)

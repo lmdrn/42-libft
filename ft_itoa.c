@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 07:12:05 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/29 10:55:51 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/29 21:50:25 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int	ft_nbrcount(int n)
 
 char	*ft_itoa(int n)
 {
-	int	neg;
-	int	len;
+	int		neg;
+	int		len;
 	char	*res;
 
 	neg = 1;

@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 14:28:22 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/29 14:49:55 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/29 21:50:08 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	int		i;
 	char	*str;
 
 	i = 0;
