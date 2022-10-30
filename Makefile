@@ -6,7 +6,7 @@
 #    By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 15:51:11 by lmedrano          #+#    #+#              #
-#    Updated: 2022/10/30 10:40:09 by lmedrano         ###   ########.fr        #
+#    Updated: 2022/10/30 13:02:43 by lmedrano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRCS		= ft_split.c ft_striteri.c ft_strmapi.c ft_itoa.c ft_strtrim.c ft_putnbr_f
 
 OBJS		= ${SRCS:.c=.o}
 
-BONUS		= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+BONUS		= ft_lstnew_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c
 
 BOBJS		= ${BONUS:.c=.o}
 
