@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:57:19 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/30 13:30:57 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/30 15:04:11 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*list;
+	t_list	*tmp;
 
-	list = lst;
-	while (list != NULL && list->next != NULL)
+	tmp = lst;
+	while (tmp)
 	{
-		list = list->next;
-	}	
-	return (list);
+		if (tmp->next == NULL)
+			return (tmp);
+		tmp = tmp->next;
+	}
+	return (tmp);
 }

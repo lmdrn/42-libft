@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:31:22 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/30 12:56:10 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/30 15:15:42 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	int		i;
 	t_list	*list;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 11:49:24 by lmedrano          #+#    #+#             */
-/*   Updated: 2022/10/30 13:54:11 by lmedrano         ###   ########.fr       */
+/*   Updated: 2022/10/30 15:15:05 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
-	*lst = new;	
+	*lst = new;
 }
